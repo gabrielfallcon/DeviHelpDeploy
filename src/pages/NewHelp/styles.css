@@ -1,0 +1,35 @@
+.indexNew {
+    width: 100%;
+    min-height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.indexNew form {
+    width: 20px;
+}
+
+#image {
+    margin-bottom: 20px;
+    border: 1px dashed #ddd;
+    background-size: cover;
+    cursor: pointer;
+    height: 160px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image input {
+    display: none;
+}
+
+.has-image {
+    border: 0
+}
+
+.has-image img {
+    display: none;
+}
