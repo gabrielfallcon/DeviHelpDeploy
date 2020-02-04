@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import { Link }          from 'react-router-dom'
 import api               from '../../services/api'
 
+import { Registers, Text, Buttons } from './styles'
+
 import './styles.css'
 
 export default function Register({ history }) {
@@ -26,17 +28,17 @@ export default function Register({ history }) {
     }
 
     return(
-        <div className="indexRegister">
-            <div className="text">
+        <Registers>
+            <Text>
                 <h1>Cadastre-se, nos ajude a te ajudar</h1>
                 
-            </div>
+            </Text>
 
             <div className="register">
-                <div className="btns">
+                <Buttons>
                     <Link className="btn btnSing" to='/'>Entrar</Link> 
                     <Link className="btn margin" to='/register'>Cadastrar</Link>
-                </div>
+                </Buttons>
                 <p>
                 <strong>Receba</strong>! <strong>Ofereca</strong>! Ajude todos a <strong>crescer</strong>.
                 </p>
@@ -76,6 +78,6 @@ export default function Register({ history }) {
                 </form>
             </div>
             
-        </div>
+        </Registers>
     )
 }

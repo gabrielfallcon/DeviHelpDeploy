@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import api                 from '../../services/api'
 import { Link }            from 'react-router-dom'
 
+import { Registers, Text, Buttons } from './styles'
+
 import './styles.css'
 
 export default function Singin({ history }) {
@@ -23,18 +25,18 @@ export default function Singin({ history }) {
     }
 
     return (
-        <div className="indexRegister">
-            <div className="text">
+        <Registers>
+            <Text>
                 <h1>Ta com dúvida? A gente te ajuda!</h1>
                 <a href="">Saiba mais</a>
                 <div className="img"/>
-            </div>
+            </Text>
 
             <div className="register">
-                <div className="btns">
+                <Buttons>
                     <Link className="btn btnSing" to='/'>Entrar</Link>
                     <Link className="btn margin" to='/register'>Cadastrar</Link>
-                </div>
+                </Buttons>
                 <p>
                     <strong>Receba</strong>! <strong>Ofereca</strong>! Ajude todos a <strong>crescer</strong>.
                 </p>
@@ -54,6 +56,6 @@ export default function Singin({ history }) {
                 </form>
             </div>
 
-        </div>
+        </Registers>
     )
 }

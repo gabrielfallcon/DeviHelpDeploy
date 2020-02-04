@@ -1,8 +1,9 @@
 import React, { useState, useMemo } from 'react'
+import api from '../../services/api'
 
 import camera from '../../assets/camera.png'
 
-import api from '../../services/api'
+import { Container, Image } from './styles'
 
 import './styles.css'
 
@@ -37,8 +38,7 @@ export default function NewHelp({ history }) {
     }
 
     return(
-        <div className="indexNew">
-
+        <Container>
             <form onSubmit={handleSubmit}>
                 <label 
                     id="image"
@@ -46,7 +46,7 @@ export default function NewHelp({ history }) {
                     className={image ? 'has-image' : ''}
                 >
                     <input type="file" onChange={event => setImage(event.target.files[0])}/>
-                    <img src={camera} alt="select img"/>
+                    <Image src={camera} alt="select img"/>
                 </label>
 
                 <label htmlFor="language">Linguagem <strong>*</strong></label>
@@ -72,9 +72,8 @@ export default function NewHelp({ history }) {
                     value={descriptionHelp}
                     onChange={event => setDescriptionHelp(event.target.value)}
                 />
-
                 <button className="btn" type="submit" >Cadastrar Ajuda</button>
             </form>
-        </div>
+        </Container>
     )
 }
